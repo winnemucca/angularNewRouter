@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+</head>
+<body layout="column"
+     ng-app='photoreview'
+     ng-controller='AppController as app'>
+<md-toolbar layout="row">
+<div class="md-toolbar-tools">
+    <span>Gallery App</span>
+</div>
+</md-toolbar>
+<div flex layout="row">
+    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')"
+      class="md-whiteframe-z2">
+     <ul>
+       <li><a ng-link="galleries()">Galleries</a></li>
+     </ul>
+   </md-sidenav>
+   <md-content flex id="content">
+     <ng-viewport></ng-viewport>
+   </md-content>
+</div>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="/node_modules/angular-new-router/dist/router.es5.js"></script>
+
+
+<script src="./bower_components/angular-animate/angular-animate.js"></script>
+<script src="./bower_components/angular-aria/angular-aria.js"></script>
+<script src="./bower_components/angular-material/angular-material.js"></script>
+<script src="./photo-review-app.js"></script> 
+
+<script src="./components/galleries/galleries.js"></script>
+<script src="./components/gallery/gallery.js"></script>
+<script src="./controllers/gallery-data-controller.js"></script>
+<script src="./services/gallery-repository-service.js"></script>
+
+</body>
+</html>
